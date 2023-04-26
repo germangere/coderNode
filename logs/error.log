@@ -1,0 +1,109 @@
+[2023-04-13T15:13:23.842] [ERROR] errorFile - Error en servidor TypeError: connectedServer.address is not a function
+[2023-04-13T15:13:23.845] [ERROR] errorFile - Error en servidor 
+[2023-04-13T15:15:54.935] [ERROR] errorFile - Error en servidor ReferenceError: connectedServer is not defined
+[2023-04-13T15:15:54.939] [ERROR] errorFile - Error en servidor 
+[2023-04-13T15:16:18.443] [ERROR] errorFile - Error en servidor 
+[2023-04-13T15:18:44.557] [ERROR] errorFile - Error en servidor TypeError: connectedServer.address is not a function
+[2023-04-18T02:50:18.101] [ERROR] errorFile - RestException [Error]: Authenticate
+    at success (D:\4node\desafios\Clase 40\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendWapp (file:///D:/4node/desafios/Clase%2040/src/services/twilio.service.js:12:25)
+    at async userSignup (file:///D:/4node/desafios/Clase%2040/src/services/auth.service.js:26:5)
+    at async postSignup (file:///D:/4node/desafios/Clase%2040/src/controllers/auth.controller.js:34:20) {
+  status: 401,
+  code: 20003,
+  moreInfo: 'https://www.twilio.com/docs/errors/20003',
+  details: undefined
+}
+[2023-04-18T03:45:36.213] [ERROR] errorFile - RestException [Error]: Twilio could not find a Channel with the specified From address
+    at success (D:\4node\desafios\Clase 40\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendWapp (file:///D:/4node/desafios/Clase%2040/src/services/twilio.service.js:12:25)
+    at async userSignup (file:///D:/4node/desafios/Clase%2040/src/services/auth.service.js:25:5)
+    at async postSignup (file:///D:/4node/desafios/Clase%2040/src/controllers/auth.controller.js:34:20) {
+  status: 400,
+  code: 63007,
+  moreInfo: 'https://www.twilio.com/docs/errors/63007',
+  details: undefined
+}
+[2023-04-18T04:21:50.443] [ERROR] errorFile - Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (D:\4node\desafios\Clase 40\node_modules\google-auth-library\build\src\auth\googleauth.js:206:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async GoogleAuth.getClient (D:\4node\desafios\Clase 40\node_modules\google-auth-library\build\src\auth\googleauth.js:638:17)
+    at async GrpcClient._getCredentials (D:\4node\desafios\Clase 40\node_modules\google-gax\build\src\grpc.js:145:24)
+    at async GrpcClient.createStub (D:\4node\desafios\Clase 40\node_modules\google-gax\build\src\grpc.js:308:23)
+Caused by: Error
+    at Firestore.getAll (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\index.js:999:23)
+    at DocumentReference.get (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\reference.js:230:32)
+    at ContenedorFirebase.listarByEmail (file:///D:/4node/desafios/Clase%2040/src/containers/ContenedorFirebase.js:30:36)
+    at userSignup (file:///D:/4node/desafios/Clase%2040/src/services/auth.service.js:11:37)
+    at postSignup (file:///D:/4node/desafios/Clase%2040/src/controllers/auth.controller.js:34:26)
+    at Layer.handle [as handle_request] (D:\4node\desafios\Clase 40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\4node\desafios\Clase 40\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\4node\desafios\Clase 40\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\4node\desafios\Clase 40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\4node\desafios\Clase 40\node_modules\express\lib\router\index.js:284:15
+[2023-04-18T04:21:50.474] [ERROR] errorFile - Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (D:\4node\desafios\Clase 40\node_modules\google-auth-library\build\src\auth\googleauth.js:206:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async GoogleAuth.getClient (D:\4node\desafios\Clase 40\node_modules\google-auth-library\build\src\auth\googleauth.js:638:17)
+    at async GrpcClient._getCredentials (D:\4node\desafios\Clase 40\node_modules\google-gax\build\src\grpc.js:145:24)
+    at async GrpcClient.createStub (D:\4node\desafios\Clase 40\node_modules\google-gax\build\src\grpc.js:308:23)
+Caused by: Error
+    at Firestore.getAll (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\index.js:999:23)
+    at DocumentReference.get (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\reference.js:230:32)
+    at ContenedorFirebase.listarByEmail (file:///D:/4node/desafios/Clase%2040/src/containers/ContenedorFirebase.js:30:36)
+    at userSignup (file:///D:/4node/desafios/Clase%2040/src/services/auth.service.js:11:37)
+    at postSignup (file:///D:/4node/desafios/Clase%2040/src/controllers/auth.controller.js:34:26)
+    at Layer.handle [as handle_request] (D:\4node\desafios\Clase 40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\4node\desafios\Clase 40\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\4node\desafios\Clase 40\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\4node\desafios\Clase 40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\4node\desafios\Clase 40\node_modules\express\lib\router\index.js:284:15
+Caused by: Error
+    at WriteBatch.commit (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\write-batch.js:433:23)
+    at DocumentReference.create (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\reference.js:321:14)
+    at CollectionReference.add (D:\4node\desafios\Clase 40\node_modules\@google-cloud\firestore\build\src\reference.js:2318:28)
+    at ContenedorFirebase.guardar (file:///D:/4node/desafios/Clase%2040/src/containers/ContenedorFirebase.js:54:49)
+    at userSignup (file:///D:/4node/desafios/Clase%2040/src/services/auth.service.js:15:29)
+    at async postSignup (file:///D:/4node/desafios/Clase%2040/src/controllers/auth.controller.js:34:20)
+[2023-04-25T02:29:05.442] [ERROR] errorFile - CastError: Cast to string failed for value "{ email: 'qq@qq.com' }" (type Object) at path "email" for model "usuarios"
+    at SchemaString.cast (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\schema\string.js:603:11)
+    at SchemaType.applySetters (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\schematype.js:1202:12)
+    at SchemaString.castForQuery (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\schema\string.js:687:15)
+    at cast (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\cast.js:290:34)
+    at Query.cast (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:4791:12)
+    at Query._castConditions (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:2177:10)
+    at model.Query._findOne (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:2465:8)
+    at model.Query.exec (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:4321:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContenedorMongoDb.listarByEmail (file:///D:/4node/desafios/Clase%2044/src/containers/ContenedorMongoDb.js:24:30) {
+  stringValue: `"{ email: 'qq@qq.com' }"`,
+  messageFormat: undefined,
+  kind: 'string',
+  value: { email: 'qq@qq.com' },
+  path: 'email',
+  reason: null,
+  valueType: 'Object',
+  model: Model { usuarios }
+}
+[2023-04-25T02:31:02.625] [ERROR] errorFile - CastError: Cast to string failed for value "{ email: 'qq@qq.com' }" (type Object) at path "email" for model "usuarios"
+    at SchemaString.cast (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\schema\string.js:603:11)
+    at SchemaType.applySetters (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\schematype.js:1202:12)
+    at SchemaString.castForQuery (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\schema\string.js:687:15)
+    at cast (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\cast.js:290:34)
+    at Query.cast (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:4791:12)
+    at Query._castConditions (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:2177:10)
+    at model.Query._findOne (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:2465:8)
+    at model.Query.exec (D:\4node\desafios\Clase 44\node_modules\mongoose\lib\query.js:4321:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContenedorMongoDb.listarByEmail (file:///D:/4node/desafios/Clase%2044/src/containers/ContenedorMongoDb.js:24:30) {
+  stringValue: `"{ email: 'qq@qq.com' }"`,
+  messageFormat: undefined,
+  kind: 'string',
+  value: { email: 'qq@qq.com' },
+  path: 'email',
+  reason: null,
+  valueType: 'Object',
+  model: Model { usuarios }
+}
