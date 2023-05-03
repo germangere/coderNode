@@ -286,3 +286,385 @@ Caused by: Error
   valueType: 'string',
   model: Model { products }
 }
+[2023-05-03T00:25:12.380] [ERROR] errorFile - Error: carts validation failed: total: Path `total` is required., email: Path `email` is required.
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: ValidatorError: Path `total` is required.
+        at validate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1347:13)
+        at SchemaType.doValidate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1331:7)
+        at D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:2865:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'total',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    email: ValidatorError: Path `email` is required.
+        at validate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1347:13)
+        at SchemaType.doValidate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1331:7)
+        at D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:2865:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'email',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T00:29:03.323] [ERROR] errorFile - Error: carts validation failed: total: Cast to Number failed for value "[ 156 ]" (type Array) at path "total"
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: CastError: Cast to Number failed for value "[ 156 ]" (type Array) at path "total"
+        at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+        at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+        at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+        at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+        at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+        at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:27:32)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+      stringValue: '"[ 156 ]"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: [Array],
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(false)
+      
+          at castNumber (D:\4node\desafios\PF\node_modules\mongoose\lib\cast\number.js:41:10)
+          at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+          at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+          at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+          at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+          at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+          at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:27:32) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'Array'
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T00:32:43.455] [ERROR] errorFile - Error: carts validation failed: total: Path `total` is required., email: Path `email` is required.
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: ValidatorError: Path `total` is required.
+        at validate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1347:13)
+        at SchemaType.doValidate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1331:7)
+        at D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:2865:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'total',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    email: ValidatorError: Path `email` is required.
+        at validate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1347:13)
+        at SchemaType.doValidate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1331:7)
+        at D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:2865:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'email',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T00:45:06.675] [ERROR] errorFile - Error: carts validation failed: total: Cast to Number failed for value "[object Object]156" (type string) at path "total", email: Path `email` is required.
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: CastError: Cast to Number failed for value "[object Object]156" (type string) at path "total"
+        at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+        at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+        at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+        at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+        at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+        at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:30:32)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+      stringValue: '"[object Object]156"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: '[object Object]156',
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (D:\4node\desafios\PF\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+          at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+          at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+          at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+          at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+          at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:30:32) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    },
+    email: ValidatorError: Path `email` is required.
+        at validate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1347:13)
+        at SchemaType.doValidate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1331:7)
+        at D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:2865:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'email',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T00:48:03.997] [ERROR] errorFile - Error: carts validation failed: total: Cast to Number failed for value "[object Object]156" (type string) at path "total"
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: CastError: Cast to Number failed for value "[object Object]156" (type string) at path "total"
+        at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+        at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+        at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+        at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+        at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+        at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:30:32)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+      stringValue: '"[object Object]156"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: '[object Object]156',
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (D:\4node\desafios\PF\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+          at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+          at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+          at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+          at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+          at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:30:32) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T00:50:33.304] [ERROR] errorFile - Error: carts validation failed: total: Cast to Number failed for value "[object Object]156" (type string) at path "total"
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: CastError: Cast to Number failed for value "[object Object]156" (type string) at path "total"
+        at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+        at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+        at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+        at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+        at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+        at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:32:32)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+      stringValue: '"[object Object]156"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: '[object Object]156',
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (D:\4node\desafios\PF\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+          at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+          at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+          at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+          at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+          at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:32:32) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T00:57:38.418] [ERROR] errorFile - Error: carts validation failed: total: Path `total` is required.
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: ValidatorError: Path `total` is required.
+        at validate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1347:13)
+        at SchemaType.doValidate (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1331:7)
+        at D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:2865:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'total',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'carts validation failed'
+}
+[2023-05-03T01:00:20.895] [ERROR] errorFile - Error: carts validation failed: total: Cast to Number failed for value "NaN" (type number) at path "total"
+    at ValidationError.inspect (D:\4node\desafios\PF\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (D:\4node\desafios\PF\node_modules\log4js\lib\layouts.js:65:52)
+    at app (D:\4node\desafios\PF\node_modules\log4js\lib\appenders\file.js:98:23)
+    at D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (D:\4node\desafios\PF\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    total: CastError: Cast to Number failed for value "NaN" (type number) at path "total"
+        at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+        at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+        at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+        at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+        at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+        at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+        at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:32:32)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+      stringValue: '"NaN"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: NaN,
+      path: 'total',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (D:\4node\desafios\PF\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (D:\4node\desafios\PF\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaType.applySetters (D:\4node\desafios\PF\node_modules\mongoose\lib\schematype.js:1202:12)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1387:22)
+          at model.$set (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:1112:16)
+          at model.Document (D:\4node\desafios\PF\node_modules\mongoose\lib\document.js:165:12)
+          at model.Model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:121:12)
+          at new model (D:\4node\desafios\PF\node_modules\mongoose\lib\model.js:4467:15)
+          at ContenedorMongoDb.guardar (file:///D:/4node/desafios/PF/src/model/containers/ContenedorMongoDb.js:51:30)
+          at productToCart (file:///D:/4node/desafios/PF/src/controllers/cart.controller.js:32:32) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'number'
+    }
+  },
+  _message: 'carts validation failed'
+}

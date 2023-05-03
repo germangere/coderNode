@@ -7,6 +7,8 @@ import { authRouter } from './routers/auth.router.js';
 import { webRouter } from './routers/web.router.js';
 import { productRouter } from './routers/product.router.js';
 import { cartRouter } from './routers/cart.router.js';
+import { adminAuth, auth } from './controllers/auth.controller.js';
+import { ordersRouter } from './routers/orders.router.js';
 
 const app = express();
 const httpServer = new HttpServer(app);
@@ -36,7 +38,8 @@ export const server = () => {
     app.use(authRouter);
     app.use(webRouter);
     app.use('/productos', productRouter);
-    app.use('/cart', cartRouter);
+    app.use('/carrito', auth, cartRouter);
+    app.use('/orders', adminAuth, ordersRouter)
 
     return {
         listen: port => new Promise((resolve, reject) => {
