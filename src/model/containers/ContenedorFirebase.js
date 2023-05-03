@@ -1,6 +1,6 @@
 import admin from 'firebase-admin';
-import config from '../config/config.js'
-import { errorLog } from '../logger/index.js';
+import { errorLog } from '../../logger/index.js';
+import config from '../../config/config.js';
 
 admin.initializeApp({
     credential: admin.credential.cert(config.firebase)
@@ -27,10 +27,10 @@ class ContenedorFirebase {
 
     async listarByEmail(email) {
         try {
-            const doc = this.coleccion.doc(`${email}`);
-            const item = await doc.get();
-            const response = item.data();
-            return response;
+            const querySnapshot = await this.coleccion.where('email', '==', `${email}`).get();
+            let docs = querySnapshot.docs;
+            const response = docs.map(doc => doc.data())
+            return response[0];
         } catch (error) {
             errorLog(error);
         }
@@ -53,7 +53,7 @@ class ContenedorFirebase {
     async guardar(nuevoElem) {
         try {
             const newDoc = await this.coleccion.add(nuevoElem);
-            return newDoc;
+            return (await newDoc.get()).data();
         } catch (error) {
             errorLog(error);
         }

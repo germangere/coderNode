@@ -1,12 +1,14 @@
-import { userSingleton } from '../model/daos/userSingleton.js';
+import { singleton } from '../model/daos/Singleton.js';
 import { crypt, verify } from './hash.service.js';
 import { sendMail } from './nodemailer.service.js';
 import { sendWapp } from './twilio.service.js';
 
-const DB = userSingleton();
+const DB = singleton.user();
 
 export const userSignup = async (user) => {
-    const { email, password, name, address, age, phone } = user;
+    const { email, reemail, password, name, address, age, phone } = user;
+
+    if (email !== reemail) return false;
 
     const registeredUser = await DB.listarByEmail(email);
     if (registeredUser) return false;

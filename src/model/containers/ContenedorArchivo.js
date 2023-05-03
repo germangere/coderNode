@@ -1,6 +1,6 @@
 import * as fs from 'fs'
-import config from '../config/config.js'
-import { errorLog, infoLog, warnLog } from '../logger/index.js';
+import config from '../../config/config.js'
+import { errorLog, infoLog, warnLog } from '../../logger/index.js';
 
 class ContenedorArchivo {
 

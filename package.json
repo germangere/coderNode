@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha src/tests/index.js",
-    "dev": "nodemon src/server.js",
+    "dev": "nodemon src/main.js",
     "start": "node src/main.js -p 8090"
   },
   "keywords": [],

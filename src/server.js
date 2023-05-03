@@ -5,7 +5,8 @@ import { Server as HttpServer } from 'http';
 import config from './config/config.js';
 import { authRouter } from './routers/auth.router.js';
 import { webRouter } from './routers/web.router.js';
-import { graphql } from './graphql/index.js';
+import { productRouter } from './routers/product.router.js';
+import { cartRouter } from './routers/cart.router.js';
 
 const app = express();
 const httpServer = new HttpServer(app);
@@ -34,8 +35,8 @@ export const server = () => {
 
     app.use(authRouter);
     app.use(webRouter);
-    app.use(graphql);
-
+    app.use('/productos', productRouter);
+    app.use('/cart', cartRouter);
 
     return {
         listen: port => new Promise((resolve, reject) => {

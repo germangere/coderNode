@@ -1,5 +1,5 @@
 export const goHome = (req, res) => {
-    res.redirect('/home');
+    res.redirect('/productos');
 }
 
 export const getHome = (req, res) => {

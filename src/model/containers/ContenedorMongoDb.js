@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
-import config from '../config/config.js'
-import { errorLog } from '../logger/index.js';
+import config from '../../config/config.js'
+import { errorLog } from '../../logger/index.js';
 
 await mongoose.connect(config.mongoRemote.cnxStr, config.mongoRemote.options)
 
@@ -31,6 +31,15 @@ class ContenedorMongoDb {
     async listarAll() {
         try {
             const elemRead = await this.coleccion.find({});
+            return elemRead;
+        } catch (error) {
+            errorLog(error);
+        }
+    }
+
+    async listarByCategory(category) {
+        try {
+            const elemRead = await this.coleccion.find({ category });
             return elemRead;
         } catch (error) {
             errorLog(error);
