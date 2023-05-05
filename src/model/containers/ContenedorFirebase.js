@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-import { errorLog } from '../../logger/index.js';
+import { errorLog } from '../../utils/logger.js';
 import config from '../../config/config.js';
 
 admin.initializeApp({

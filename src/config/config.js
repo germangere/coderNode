@@ -4,8 +4,8 @@ import firebase from '../../firebase.json' assert {type: 'json'};
 dotenv.config();
 
 const args = yargs(process.argv.slice(2))
-    .alias({ p: 'port', m: 'mode', d: 'database', u: 'user' })
-    .default({ port: process.env.PORT, mode: 'FORK', database: 'mongodb', user: 'user' }).argv;
+    .alias({ p: 'port', m: 'mode', d: 'database', u: 'user', s: 'sessionTime' })
+    .default({ port: process.env.PORT, mode: 'FORK', database: 'mongodb', user: 'user', sessionTime: 15 }).argv;
 
 
 export default {
@@ -13,6 +13,8 @@ export default {
     PORT: args.port,
     user: args.user,
     DB: args.database,
+    sessionTime: args.sessionTime,
+    jwtSecret: process.env.JWT_SECRET,
     mongoRemote: {
         cnxStr: process.env.MONGO_URL,
         options: {

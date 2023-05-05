@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import config from '../../config/config.js'
-import { errorLog } from '../../logger/index.js';
+import { errorLog } from '../../utils/logger.js';
 
 await mongoose.connect(config.mongoRemote.cnxStr, config.mongoRemote.options)
 

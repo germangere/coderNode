@@ -1,6 +1,6 @@
 import twilio from 'twilio';
 import config from '../config/config.js';
-import { errorLog, infoLog } from '../logger/index.js';
+import { errorLog, infoLog } from './logger.js';
 
 const accountSid = config.twilio.sid;
 const authToken = config.twilio.token;

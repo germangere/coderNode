@@ -11,7 +11,7 @@ export const getProduct = async (req, res) => {
     const product = await DB.listar(req.params.id);
     Array.isArray(product) && product.length !== 0
         ? res.json(product)
-        : res.json({ description: "producto no existente" })
+        : res.send('Producto no existente')
 }
 
 export const getCategory = async (req, res) => {
