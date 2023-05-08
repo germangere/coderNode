@@ -11,6 +11,7 @@ export const httpServer = new HttpServer(app);
 export const server = () => {
     app.use(express.json());
     app.use(urlencoded({ extended: true }));
+    app.use(express.static('public'));
 
     app.use(session(sessionConfig));
 
