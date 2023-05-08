@@ -10,3 +10,5 @@ productRouter.get('/:categoria', getCategory);
 productRouter.post('/', adminAuth, postProduct);
 productRouter.put('/:id', adminAuth, putProduct);
 productRouter.delete('/:id', adminAuth, deleteProduct);
+
+export default productRouter;

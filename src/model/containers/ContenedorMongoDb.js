@@ -28,6 +28,15 @@ class ContenedorMongoDb {
         }
     }
 
+    async listarAllByEmail(email) {
+        try {
+            const elemRead = await this.coleccion.find({ email });
+            return elemRead;
+        } catch (error) {
+            errorLog(error);
+        }
+    }
+
     async listarAll() {
         try {
             const elemRead = await this.coleccion.find({});

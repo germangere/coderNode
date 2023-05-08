@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-export default new Schema({
+const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     name: { type: String, required: true },
@@ -9,3 +9,5 @@ export default new Schema({
     age: { type: Number, required: true },
     phone: { type: Number, required: true }
 })
+
+export default userSchema;

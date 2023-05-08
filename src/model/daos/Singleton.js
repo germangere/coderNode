@@ -1,10 +1,11 @@
-import { getUserDao, getProductDao, getCartDao, getOrderDao } from "./Factory.js";
+import { getUserDao, getProductDao, getCartDao, getOrderDao, getChatDao } from "./Factory.js";
 
 let instance = {
     user: null,
     product: null,
     cart: null,
-    order: null
+    order: null,
+    chat: null
 }
 
 export const singleton = {
@@ -23,5 +24,9 @@ export const singleton = {
     order: () => {
         if (!instance.order) instance.order = getOrderDao();
         return instance.order;
+    },
+    chat: () => {
+        if (!instance.chat) instance.chat = getChatDao();
+        return instance.chat;
     }
 }

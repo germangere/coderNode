@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-export default new Schema({
+const orderSchema = new Schema({
     email: { type: String, required: true },
     products: { type: Array, required: true },
     total: { type: Number, required: true },
@@ -12,3 +12,5 @@ export default new Schema({
         timestamps: true
     }
 )
+
+export default orderSchema;

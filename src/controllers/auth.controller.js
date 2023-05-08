@@ -25,7 +25,13 @@ export const getSignup = (req, res) => {
 
 export const postSignup = async (req, res) => {
     const result = await userSignup(req.body);
-    res.send(result)
+    if (typeof (result) === 'string') {
+        res.send(result);
+    } else {
+        req.session.user = result.user;
+        console.log('todo okkk', req.session.user)
+        res.send(result);
+    }
 }
 
 export const getLogout = (req, res) => {

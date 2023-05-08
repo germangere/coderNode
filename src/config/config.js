@@ -15,6 +15,9 @@ export default {
     DB: args.database,
     sessionTime: args.sessionTime,
     jwtSecret: process.env.JWT_SECRET,
+    adminEmail: process.env.ADMIN_EMAIL,
+    firebase,
+
     mongoRemote: {
         cnxStr: process.env.MONGO_URL,
         options: {
@@ -22,6 +25,7 @@ export default {
             useUnifiedTopology: true,
         }
     },
+
     sqlite3: {
         client: 'sqlite3',
         connection: {
@@ -29,6 +33,7 @@ export default {
         },
         useNullAsDefault: true
     },
+
     mariaDb: {
         client: 'mysql',
         connection: {
@@ -39,15 +44,16 @@ export default {
             database: process.env.MARIADB_DB
         }
     },
-    firebase,
+
     fileSystem: {
         path: process.env.FILESYSTEM_PATH
     },
-    adminEmail: process.env.ADMIN_EMAIL,
+
     nodemailer: {
         user: process.env.NODEMAILER_USER,
         pass: process.env.NODEMAILER_PASS
     },
+
     twilio: {
         sid: process.env.TWILIO_SID,
         token: process.env.TWILIO_TOKEN,
