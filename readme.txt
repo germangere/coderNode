@@ -7,3 +7,7 @@ Implementé JWT de forma "nativa", es decir, sin passport, debido a que nunca pu
 El modo admin se activa desde la consola cuando levantamos el server con el flag < -u admin > para la vista de órdenes y la adminstración de productos disponibles.
 
 El tiempo de sesión se configura en minutos.
+
+El modelo está preparado para integrar distintas bases de datos. Empecé a desarrollar la conexión con Firebase y MySQL, pero por cuestiones de tiempo lo dejo como dice la consigna, sólo con mongodb.
+
+Para ingresar al chat con postman primero hay que hacer un get en la carpeta chat/ingreso al chat, luego conectarse al socket (dentro de la carpeta "Coder Proyecto Final Chat)

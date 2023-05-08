@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-import config from '../../config/config.js'
+import mongoose from 'mongoose';
+import config from '../../config/config.js';
 import { errorLog } from '../../utils/logger.js';
 
 await mongoose.connect(config.mongoRemote.cnxStr, config.mongoRemote.options)
@@ -7,7 +7,7 @@ await mongoose.connect(config.mongoRemote.cnxStr, config.mongoRemote.options)
 class ContenedorMongoDb {
 
     constructor(nombreColeccion, esquema) {
-        this.coleccion = mongoose.model(nombreColeccion, esquema)
+        this.coleccion = mongoose.model(nombreColeccion, esquema);
     }
 
     async listar(id) {

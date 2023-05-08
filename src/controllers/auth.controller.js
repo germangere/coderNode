@@ -1,4 +1,4 @@
-import { userLogin, userSignup } from "../services/auth.service.js";
+import { userLogin, userSignup } from '../services/auth.service.js';
 
 
 export const getLogin = (req, res) => {
@@ -29,7 +29,6 @@ export const postSignup = async (req, res) => {
         res.send(result);
     } else {
         req.session.user = result.user;
-        console.log('todo okkk', req.session.user)
         res.send(result);
     }
 }

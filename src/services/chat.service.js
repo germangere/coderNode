@@ -8,7 +8,7 @@ export const chatService = async (user) => {
     const io = new Server(httpServer);
 
     io.on('connection', async (socket) => {
-        const oldMsgs = await DB.listarAllByEmail(user.email)
+        const oldMsgs = await DB.listarAllByEmail(user.email);
         oldMsgs.sort((a, b) => a.createdAt - b.createdAt);
         if (oldMsgs) {
             socket.emit('messages', oldMsgs);

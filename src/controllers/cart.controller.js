@@ -1,5 +1,5 @@
-import { singleton } from "../model/daos/Singleton.js"
-import { deleteItem, saveProductToCart } from "../services/cart.service.js";
+import { singleton } from '../model/daos/Singleton.js';
+import { deleteItem, saveProductToCart } from '../services/cart.service.js';
 
 const DB = singleton.cart();
 const DbOrder = singleton.order();

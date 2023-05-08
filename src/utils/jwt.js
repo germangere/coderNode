@@ -1,6 +1,6 @@
-import pkg from "jsonwebtoken";
-import { verify } from "jsonwebtoken";
-import config from "../config/config.js";
+import pkg from 'jsonwebtoken';
+import { verify } from 'jsonwebtoken';
+import config from '../config/config.js';
 const { sign } = pkg;
 
 export const generateToken = (email) => {

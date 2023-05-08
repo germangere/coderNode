@@ -1,4 +1,4 @@
-import { singleton } from "../model/daos/Singleton.js";
+import { singleton } from '../model/daos/Singleton.js';
 
 const DB = singleton.cart();
 
@@ -13,7 +13,7 @@ export const saveProductToCart = async (email, product) => {
 
         if (cart) {
 
-            const prodExist = cart.products.findIndex(p => p._id === product._id)
+            const prodExist = cart.products.findIndex(p => p._id === product._id);
 
             //compruebo si ya tiene el producto agregado al carrito.
             //En caso que sí, le sumo la cantidad seleccionada
@@ -33,7 +33,7 @@ export const saveProductToCart = async (email, product) => {
                 total
             }
 
-            return await DB.actualizar(cart._id, toSave)
+            return await DB.actualizar(cart._id, toSave);
 
         } else {
 
@@ -60,7 +60,7 @@ export const deleteItem = async (email, id) => {
     try {
 
         const cart = await DB.listarByEmail(email);
-        const index = cart.products.findIndex(p => p._id === id)
+        const index = cart.products.findIndex(p => p._id === id);
 
         if (index !== -1) {
 

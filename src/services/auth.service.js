@@ -40,7 +40,7 @@ export const userLogin = async (user) => {
     if (!userExists) return 'El usuario no existe';
 
     const passOk = await verify(password, userExists.password);
-    if (!passOk) return 'Error en password'
+    if (!passOk) return 'Error en password';
 
     const token = generateToken(email);
     return {

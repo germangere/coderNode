@@ -1,4 +1,4 @@
-import { singleton } from "../model/daos/Singleton.js"
+import { singleton } from '../model/daos/Singleton.js';
 
 const DB = singleton.order();
 

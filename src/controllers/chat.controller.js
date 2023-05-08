@@ -1,5 +1,5 @@
-import { singleton } from "../model/daos/Singleton.js";
-import { chatService } from "../services/chat.service.js";
+import { singleton } from '../model/daos/Singleton.js';
+import { chatService } from '../services/chat.service.js';
 
 const DB = singleton.chat();
 

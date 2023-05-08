@@ -20,7 +20,7 @@ export const sendWapp = async (newUser) => {
             from: `whatsapp:${config.twilio.from}`,
             to: 'whatsapp:+5492615793559'
         })
-        infoLog(message)
+        infoLog(message);
     } catch (e) {
         errorLog(e);
     }
