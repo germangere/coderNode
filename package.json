@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/main.js",
-    "start": "node src/main.js -p 8090"
+    "start": "node src/main.js"
   },
   "keywords": [],
   "author": "",
